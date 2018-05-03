@@ -1,0 +1,62 @@
+body {
+    line-height: 150%;
+    background-color: black;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ddd;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif, 'Roboto', sans-serif;
+    font-size: 1em;
+    width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+}
+#timer{
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*footer*/
+
+#footernav {
+    background-color: #666666;
+    color: lightgray;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+#footernav a:link,
+a:visited {
+    color: lightgray;
+}
+
+.copy {
+    padding: 5px;
+}
+
+.social {
+    padding: 5px;
+    margin: 0 auto;
+}
+
+@media (max-width: 840px) {
+   
+
+}
+
+@media (max-width: 375px) {
+#footernav {
+    display: none;
+}
+.icon {
+  display: none;
+}
+}
