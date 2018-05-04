@@ -24,7 +24,8 @@ var questionsArr = [{
     image:"assets/images/england.png"
   }];
 
-  var game = $('#game');// game information/stats report div
+  var game = $('#game');// game information report div
+  var gameStats = $("#gameStats"); // statistics div
   var questionTime = 30; // time set to answer each question 
 
   var questionsArr;
@@ -92,13 +93,16 @@ function timeOver(){
 // rendering game result information into the game div
 function quizInfo() {  
       clearInterval(timer);
-  
+      gameStats.show();// to show again stats box
+      gameStats.css({"background-color": "#a7d8e5","border": "2px solid  #ff5333" ,
+      "border-radius":"5%", "box-shadow": "inset 1px 1px 19px 8px rgba(255,83,51)"
+      });
       game.html('<h2>All done, see your result!</h2>');
       $('#timeLeft').html(timeLeft);
-      game.append('<h3>Correct Answers: ' + correct + '</h3>');
-      game.append('<h3>Incorrect Answers: ' + incorrect + '</h3>');
-      game.append('<h3>Unanswered: ' + (questionsArr.length - (incorrect + correct)) + '</h3>');
-      game.append('<br><button id="startAgain" class=" btn btn-raised btn-warning">START AGAIN ?</button>');
+      gameStats.append('<h3>Correct Answers: ' + correct + '</h3>');
+      gameStats.append('<h3>Incorrect Answers: ' + incorrect + '</h3>');
+      gameStats.append('<h3>Unanswered: ' + (questionsArr.length - (incorrect + correct)) + '</h3>');
+      gameStats.append('<br><button id="startAgain" class=" btn btn-raised btn-warning">START AGAIN ?</button>');
     };
 
     
@@ -129,6 +133,8 @@ function quizInfo() {
     };
 
    function startAgain(){
+    gameStats.empty(); //empty stats box and hide until stats for next game needed to be displayed
+    gameStats.hide();
       currentQuestion = 0;
       timeLeft = questionTime;
       correct = 0;
@@ -138,10 +144,14 @@ function quizInfo() {
 
     $(document).on('click', '#start', function() {
       $('#gameTimer').html('<h2>Time Remaining: <span id="timeLeft">30</span> Seconds</h2>');
+      $("h2").css({"margin": "10% auto","color":"white","background-color": "#ff5333", "padding": "5px", "opacity":"1", "border":"1px solid white"});
       triviaQuestion();
     });
     $(document).on('click', '#startAgain', function() {
+      
       $('#gameTimer').html('<h2>Time Remaining: <span id="timeLeft">30</span> Seconds</h2>');
+      $("h2").css({"margin": "10% auto","color":"white","background-color": "#ff5333", "padding": "5px", "opacity":"1", "border":"1px solid white"});
+      
       startAgain();
     });
     
