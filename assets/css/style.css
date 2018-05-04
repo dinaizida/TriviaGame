@@ -13,14 +13,14 @@ body {
     min-height: 100vh;
     text-align: center;
 }
-h1 {
- margin: 20px auto;
- color: #ff5333;
- text-shadow: 4px 4px 2px rgb(108,190,212);
- 
 
+h1 {
+    margin: 20px auto;
+    color: #ff5333;
+    text-shadow: 4px 4px 2px rgb(108, 190, 212);
 }
-h2{
+
+h2 {
     background-color: #a7d8e5;
     opacity: 0.9;
     border: 1px solid white;
@@ -28,32 +28,32 @@ h2{
     padding: 10px;
     margin: 20px auto;
 }
-#start{
+
+#start {
     margin: 30% auto;
 }
-#timer{
+
+#timer {
     display: flex;
     justify-content: center;
 }
-#gameStats{
+
+#gameStats {
     width: 50%;
     margin: 10% auto;
     padding: 25px;
     color: #ff5333;
     opacity: 0.8;
-    /* border: 2px solid  #ff5333;
-    border-radius: 5%;
-    -webkit-box-shadow: inset 1px 1px 19px 8px rgba(255,83,51);
-    -moz-box-shadow: inset 1px 1px 19px 8px rgba(255,83,51);
-    box-shadow: inset 1px 1px 19px 8px rgba(255,83,51); */
 }
-img{
+
+img {
     margin: 10px auto;
     padding: 10px;
     width: 50%;
     height: auto;
 }
-.answerDiv{
+
+.answerDiv {
     width: 30%;
     margin: 5% auto;
     padding: 5px;
@@ -62,13 +62,15 @@ img{
     border-radius: 1%;
     opacity: 0.8;
 }
-.answerDiv:hover{
+
+.answerDiv:hover {
     width: 32%;
     font-size: 1.4em;
     cursor: pointer;
     opacity: 1.0;
     border-radius: 50%
 }
+
 
 /*footer*/
 
@@ -96,35 +98,27 @@ a:visited {
 }
 
 @media (min-width: 840px) {
-   .container-flex{
-       width: 70%;
-       height: auto;
-       margin: auto;
-   }
-
+    .container-flex {
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
 }
 
 @media (max-width: 375px) {
-#footernav {
-    display: none;
-}
-h2,h3{
-    width: 90%;
-    margin: auto;
-    font-size: 1.2em;
-    
-    padding: 10px;
-}
-#gameStats{
-  width: 80%;
-  margin: 10px auto;
-  margin-top: 20px;
-  /* padding-bottom: 15px; */
-
-}
-
-
-
-
-
+    #footernav {
+        display: none;
+    }
+    h2,
+    h3 {
+        width: 90%;
+        margin: auto;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    #gameStats {
+        width: 80%;
+        margin: 10px auto;
+        margin-top: 20px;
+    }
 }
