@@ -1,5 +1,6 @@
 Trivia Game
 
+https://dinaizida.github.io/TriviaGame/ 
 
 Project Description:
 
@@ -15,3 +16,4 @@ Project Details:
 
 Technologies Used: HTML, CSS, jQuery, Material Design front-end component library for Bootstrap.
 
+![Screen Shot](https://github.com/dinaizida/TriviaGame/blob/master/assets/images/git.png)
